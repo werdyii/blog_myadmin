@@ -1,4 +1,10 @@
 BlogMyadmin::Application.routes.draw do
+  get "categories/show"
+
+  get "posts/index"
+
+  get "posts/show"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
