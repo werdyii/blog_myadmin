@@ -19,9 +19,9 @@
         show
 </pre></code>
 2. Vytvoriť väzby medzi Post a Category. 
-3. Naplniť databazú pomocou seedu.
-4. Vytvoriť jednoduchý layout s pouzitim partialov. 
-5. Vygenerovat dve staticke stranky:
+3. Naplniť databázu pomocou seedu.
+4. Vytvoriť jednoduchý layout s použitím partialov. 
+5. Vygenerovať dve statické stranky:
     * kontakt
     * o blogu
 6. Vytvoriť jednoduchú administráciu blogu (CRUD)

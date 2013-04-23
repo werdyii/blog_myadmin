@@ -1,9 +1,7 @@
 BlogMyadmin::Application.routes.draw do
-  get "categories/show"
-
-  get "posts/index"
-
-  get "posts/show"
+  root :to => 'posts#index'
+  resources :posts, :only => [:index, :show]
+  resources :categories, :only => [:show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
