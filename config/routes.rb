@@ -1,5 +1,9 @@
 BlogMyadmin::Application.routes.draw do
   root :to => 'posts#index'
+
+  get "/kontakt" => 'static_pages#contact', :as => :contact
+  get "/onas" => 'static_pages#about', :as => :about
+
   resources :posts, :only => [:index, :show]
   resources :categories, :only => [:show]
 
