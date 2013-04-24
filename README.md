@@ -25,3 +25,4 @@
     * kontakt
     * o blogu
 6. Vytvoriť jednoduchú administráciu blogu (CRUD)
+7. Validacia formulárov a zobrazovanie chýb.

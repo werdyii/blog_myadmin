@@ -1,0 +1,16 @@
+<fieldset>
+	<legend> Kategória </legend>
+	<%= form_for [:admin, @category] do |f| %>
+		<ul>
+		<% @category.errors.full_messages.each do |msg| %>
+		  <li><%= msg %></li>
+		<% end %>
+		</ul>		
+		<p>
+			<%= f.label :name, "Názov: " %>
+			<%= f.text_field :name %>
+		</p>
+		<p><%= f.submit "Uložiť" %></p>
+		<p><%= link_to "Speť na zoznam", admin_categories_path %></p>
+	<% end %>
+</fieldset>
