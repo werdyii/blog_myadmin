@@ -67,3 +67,47 @@ a {
     padding-right: 20px;
   }
 }
+.admin{
+  font-family: verdana, sans-serif;
+  font-size: 16px;
+  background-color: #b77;
+  color: darken(#fff, 85);
+
+  a {
+    color: red;
+  }
+  label {
+    float: left;
+    text-align: right;
+    width: 150px;
+    margin-right: 20px;
+  }
+  input[type='text'],
+  textarea,
+  fieldset {
+    border: 1px solid #aaa;
+    padding: 10px 20px;
+  }
+  input[type='submit']{
+    margin-left: 170px;
+  }
+}
+table {
+  border-collapse:collapse;
+  margin-bottom: 3em;
+ 
+  th {
+    background: silver;
+    color: #222;
+    padding:5px;
+  }
+  td {
+    padding:10px;
+  }
+  tr {
+    border-bottom: 1px solid #aaa;
+  }
+  tr:hover {
+    background: #fdd;
+  }
+}

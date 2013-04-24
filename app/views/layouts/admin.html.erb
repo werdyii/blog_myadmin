@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>Blog - Administrácia</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="admin">
 
 <div class="container">
   <div class="header">
@@ -14,21 +14,10 @@
   </div>
 
   <div class="right-side">
-    <h3>Kategórie</h3>
-    <ul>
-      <% Category.all.each do |category| %>
-        <li><%= link_to category.name, category %></li>
-      <% end %>
-    </ul>
-
-    <h3>Viac</h3>
-    <ul>
-      <li><%= link_to "O tomto blogu", about_path %></li>
-      <li><%= link_to "Kontakt na mňa", contact_path %></li> 
-    </ul>
     <h3>Administrácia</h3>
     <ul>
-      <li><%= link_to "Správa obsahu", admin_path %></li>
+      <li><%= link_to "Posts", admin_posts_path %></li>
+      <li><%= link_to "Kategorie", admin_categories_path %></li> 
     </ul>
   </div>
 

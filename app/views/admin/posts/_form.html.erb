@@ -1,0 +1,24 @@
+<fieldset>
+	<legend> Článok </legend>
+	<%= form_for [:admin, @post] do |f| %>
+		<ul>
+		<% @post.errors.full_messages.each do |msg| %>
+		  <li><%= msg %></li>
+		<% end %>
+		</ul>		
+		<p>
+			<%= f.label :title, "Názov: " %>
+			<%= f.text_field :title %>
+		</p>
+		<p>
+			<%= f.label :body, "Blog: " %>
+			<%= f.text_area :body %>
+		</p>
+		<p>
+			<%= f.label :category_id, "Kategória: " %>
+			<%= f.collection_select :category_id, Category.all, :id, :name %>
+		</p>
+		<p><%= f.submit "Uložiť" %></p>
+		<p><%= link_to "Speť na zoznam", admin_posts_path %></p>
+	<% end %>
+</fieldset>
