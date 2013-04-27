@@ -1,4 +1,5 @@
 BlogMyadmin::Application.routes.draw do
+  
   root :to => 'posts#index'
 
   get "/kontakt" => 'static_pages#contact', :as => :contact
@@ -6,6 +7,11 @@ BlogMyadmin::Application.routes.draw do
 
   resources :posts, :only => [:index, :show]
   resources :categories, :only => [:show]
+
+  resources :projects do
+    resources :tasks
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

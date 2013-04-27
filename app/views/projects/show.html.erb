@@ -1,0 +1,10 @@
+<h2><%= @project.name %></h2>
+
+<% if @tasks.any? %>
+  <%= render @tasks %>
+<% else %>
+  <p>V tomto projekte sa nič nenachádza.</p>
+<% end %>
+
+<p><%= link_to "Nová úloha", new_project_task_path(@project) %></p>
+<p><%= link_to "Späť na projekty", projects_path %></p>

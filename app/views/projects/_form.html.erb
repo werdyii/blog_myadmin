@@ -1,0 +1,11 @@
+<%= form_for @project do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<p><%= link_to "Späť", projects_path %></p>

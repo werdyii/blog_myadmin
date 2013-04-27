@@ -1,0 +1,7 @@
+<p>
+	<%= link_to "X", 
+			project_task_path(task.project,task),
+			:method => :delete,
+			:data => {:confirm => 'Naozaj to chceš smaznuť ???'} %>
+	<%= link_to task.name, edit_project_task_path(task.project,task) %>
+</p>

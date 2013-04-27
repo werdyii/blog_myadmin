@@ -1,0 +1,12 @@
+<h3>Projekt: <%= @project.name %> </h3>
+<%= form_for [@project, @task] do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<p><%= link_to "Späť", project_path(@project) %></p>

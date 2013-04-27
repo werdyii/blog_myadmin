@@ -1,0 +1,7 @@
+<p>
+	<%= link_to "#{project.name} (#{project.tasks.count})", project  %>
+	[<%= link_to "Uprav", edit_project_path(project) %>|
+	<%= link_to "Zmaž", project_path(project), 
+				:method => :delete,
+				:data =>{ :confirm => "Chceš to naozaj zmazať?"} %>]
+</p>

@@ -1,28 +1,33 @@
-# Kurz: [*Learn2CodeSK*](http://www.learn2code.sk/)
+#Kurz: [*Learn2CodeSK*](http://www.learn2code.sk/)
 
-## Zadanie: 
-1. Vytvoriť jednoduchý blog ktorý bude mať:
-    * MODEL:
-<code><pre>
-    Post
+##Zadanie: 
+* Vytvoriť jednoduchý blog ktorý bude mať:
+
+MODEL:
+
+     Post
         title :string
         body :text
-    Category
+     Category
         name :string
-</pre></code>
-    * CONTROLLERS:
-<code><pre>
-    Posts
+CONTROLLERS:
+
+     Posts
         index
         show
-    Categories
+     Categories
         show
-</pre></code>
-2. Vytvoriť väzby medzi Post a Category. 
-3. Naplniť databázu pomocou seedu.
-4. Vytvoriť jednoduchý layout s použitím partialov. 
-5. Vygenerovať dve statické stranky:
-    * kontakt
-    * o blogu
-6. Vytvoriť jednoduchú administráciu blogu (CRUD)
-7. Validacia formulárov a zobrazovanie chýb.
+
+* Vytvoriť väzby medzi Post a Category. 
+* Naplniť databázu pomocou seedu.
+* Vytvoriť jednoduchý layout s použitím partialov. 
+* Vygenerovať dve statické stranky:
+ * kontakt
+ * o blogu
+* Vytvoriť jednoduchú administráciu blogu (CRUD)
+* Validacia formulárov a zobrazovanie chýb.
+
+## Zadanie 2:
+* Vytvorenie TO-DO listu.
+* Vytvoriť dva asociovane modely project a task
+* Vytvoriť controlery a views pre spravu to-do listu
