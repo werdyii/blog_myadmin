@@ -1,25 +1,5 @@
 BlogMyadmin::Application.routes.draw do
   
-  get "photos/index"
-
-  get "photos/show"
-
-  get "photos/new"
-
-  get "photos/edit"
-
-  get "photos/destroy"
-
-  get "albums/index"
-
-  get "albums/show"
-
-  get "albums/new"
-
-  get "albums/edit"
-
-  get "albums/destroy"
-
   root :to => 'posts#index'
 
   get "/kontakt" => 'static_pages#contact', :as => :contact
@@ -32,7 +12,9 @@ BlogMyadmin::Application.routes.draw do
     resources :tasks
   end
 
-
+  resources :albums do
+    resources :photos
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

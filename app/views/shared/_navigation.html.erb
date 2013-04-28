@@ -1,0 +1,33 @@
+<h3>Kategórie</h3>
+<ul>
+  <% Category.all.each do |category| %>
+    <li><%= link_to category.name, category %></li>
+  <% end %>
+</ul>
+
+<h3>To-Do</h3>
+<ul>
+  <li><%= link_to "Todo list", projects_path %></li>
+  <ul>
+  	<% Project.all.each do |project| %>
+  		<li><%= link_to project.name, project %></li>
+  	<% end %>
+  </ul>
+
+</ul>
+
+<h3>Galéria</h3>
+<ul>
+  <li><%= link_to "Foto galéria", albums_path %></li>
+</ul>
+
+<h3>Viac</h3>
+<ul>
+  <li><%= link_to "O tomto blogu", about_path %></li>
+  <li><%= link_to "Kontakt na mňa", contact_path %></li> 
+</ul>
+
+<h3>Administrácia</h3>
+<ul>
+  <li><%= link_to "Správa obsahu", admin_path %></li>
+</ul>

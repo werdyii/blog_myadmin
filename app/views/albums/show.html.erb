@@ -1,2 +1,10 @@
-<h1>Albums#show</h1>
-<p>Find me in app/views/albums/show.html.erb</p>
+<h2><%= @album.name %></h2>
+
+<% if @photos.any? %>
+  <%= render @photos %>
+<% else %>
+  <p>V tomto albume niesu ešte fotky.</p>
+<% end %>
+
+<p><%= link_to "Pridaj fotku", new_album_photo_path(@album) %></p>
+<p><%= link_to "Späť", albums_path %></p>

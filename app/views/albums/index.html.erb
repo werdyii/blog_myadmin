@@ -1,2 +1,9 @@
-<h1>Albums#index</h1>
-<p>Find me in app/views/albums/index.html.erb</p>
+<h3>Album</h3>
+
+<% if @albums.any? %>
+  <%= render @albums %>
+<% else %>
+  <p>Nevytvoril si ešte ani jeden album.</p>
+<% end %>
+
+<%= link_to "Pridaj album", new_album_path %>
