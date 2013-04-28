@@ -1,0 +1,9 @@
+<li>
+	<%= image_tag photo.file.thumb100.url %>
+	<small>
+		<%= link_to "X", 
+				album_photo_path( photo.album, photo),
+				:method => :delete,
+				:data => {:confirm => 'Naozaj to chceš smaznuť ???'} %>
+	</small>
+</li>

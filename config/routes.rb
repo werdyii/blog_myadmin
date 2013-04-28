@@ -13,7 +13,7 @@ BlogMyadmin::Application.routes.draw do
   end
 
   resources :albums do
-    resources :photos
+    resources :photos, :only => [:new, :create, :destroy]
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.
