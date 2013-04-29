@@ -64,6 +64,9 @@ BlogMyadmin::Application.routes.draw do
   namespace :admin do
    resources :posts
    resources :categories
+   resources :albums do
+    resources :photos
+   end
   end
   get '/admin' => 'admin/posts#index'
 

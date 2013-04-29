@@ -1,7 +1,0 @@
-<p>
-	<%= link_to "#{album.name} (#{album.photos.count})", album  %>
-	[ <%= link_to "Uprav", edit_album_path(album) %> |
-	<%= link_to "Zmaž", album_path(album), 
-				:method => :delete,
-				:data =>{ :confirm => "Chceš to naozaj zmazať?"} %> ]
-</p>

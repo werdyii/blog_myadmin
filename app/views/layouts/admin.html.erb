@@ -17,7 +17,17 @@
     <h3>Administrácia</h3>
     <ul>
       <li><%= link_to "Posts", admin_posts_path %></li>
-      <li><%= link_to "Kategorie", admin_categories_path %></li> 
+      <li><%= link_to "Kategorie", admin_categories_path %></li>
+      <li><%= link_to "Albumy", admin_albums_path %></li>
+      <ul>
+        <% Album.all.each do |album| %>
+          <li><%= link_to album.name, admin_album_path(album) %></li>
+        <% end %>
+      </ul>
+    </ul>
+    <h3>Rails Blog</h3>
+    <ul>
+      <li><%= link_to "Späť", root_path %></li>
     </ul>
   </div>
 

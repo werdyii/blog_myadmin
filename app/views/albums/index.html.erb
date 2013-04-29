@@ -1,9 +1,0 @@
-<h3>Album</h3>
-
-<% if @albums.any? %>
-  <%= render @albums %>
-<% else %>
-  <p>Nevytvoril si ešte ani jeden album.</p>
-<% end %>
-
-<%= link_to "Pridaj album", new_album_path %>

@@ -18,7 +18,9 @@
 
 <h3>Galéria</h3>
 <ul>
-  <li><%= link_to "Foto galéria", albums_path %></li>
+  <% Album.all.each do |album| %>
+    <li><%= link_to album.name, album %></li>
+  <% end %>
 </ul>
 
 <h3>Viac</h3>

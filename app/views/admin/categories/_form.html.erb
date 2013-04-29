@@ -1,7 +1,7 @@
 <fieldset>
 	<legend> Kategória </legend>
 	<%= form_for [:admin, @category] do |f| %>
-		<ul>
+		<ul class="errors">
 		<% @category.errors.full_messages.each do |msg| %>
 		  <li><%= msg %></li>
 		<% end %>

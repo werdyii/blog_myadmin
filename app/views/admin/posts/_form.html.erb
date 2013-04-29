@@ -1,7 +1,7 @@
 <fieldset>
 	<legend> Článok </legend>
 	<%= form_for [:admin, @post] do |f| %>
-		<ul>
+		<ul class="errors">
 		<% @post.errors.full_messages.each do |msg| %>
 		  <li><%= msg %></li>
 		<% end %>
