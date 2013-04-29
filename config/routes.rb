@@ -12,9 +12,8 @@ BlogMyadmin::Application.routes.draw do
     resources :tasks
   end
 
-  resources :albums do
-    resources :photos, :only => [:new, :create, :destroy]
-  end
+  resources :albums , :only => [:show]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -65,7 +64,7 @@ BlogMyadmin::Application.routes.draw do
    resources :posts
    resources :categories
    resources :albums do
-    resources :photos
+    resources :photos 
    end
   end
   get '/admin' => 'admin/posts#index'
