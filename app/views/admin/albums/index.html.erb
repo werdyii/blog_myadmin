@@ -1,0 +1,18 @@
+<h3>Administrácia albumov galérie</h3>
+<% if @albums.any? %>
+<table>
+	<thead>
+		<tr>
+			<th>Názov albumu</th>
+			<th>Počet fotiek</th>
+			<th>Akcia</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%= render @albums %>	
+	</tbody>
+</table>
+<% else %>
+  <p>Nevytvoril si ešte ani jeden album.</p>
+<% end %>
+<%= link_to "Pridaj album", new_admin_album_path %>

@@ -1,0 +1,16 @@
+<h2><%= @album.name %></h2>
+
+<div class="photos">
+	<% if @photos.any? %>
+	<ul>
+		<%= render @photos %>
+	</ul>
+	<div class="clear"></div>
+	<% else %>
+	  <p>V tomto albume niesu ešte fotky.</p>
+	<% end %>
+	<div class="actions">
+		<%= link_to "Pridaj fotku", new_admin_album_photo_path(@album) %> |
+		<small><%= link_to "Späť", admin_albums_path %></small>
+	</div>
+</div>

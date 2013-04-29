@@ -1,0 +1,16 @@
+<fieldset>
+	<legend>Album: <%= @album.name %> </legend>	
+	<%= form_for [:admin, @album, @photo] do |f| %>
+		<ul class="errors">
+		<% @photo.errors.full_messages.each do |msg| %>
+		  <li><%= msg %></li>
+		<% end %>
+		</ul>	
+	  <p>
+	    <%= f.label :file %>
+	    <%= f.file_field :file %>
+	  </p>
+	  <p><%= f.submit "Uložiť"%></p>
+	  <p><%= link_to "Späť", admin_album_path(@album) %></p>
+	<% end %>
+</fieldset>

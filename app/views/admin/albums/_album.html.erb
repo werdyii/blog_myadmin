@@ -1,0 +1,12 @@
+<tr>
+	<td><%= link_to album.name, 
+									admin_album_path(album),
+									{ :title => "Zobraz fotky v albume"} %></td>
+	<td><%= album.photos.count %></td>
+	<td>
+		<%= link_to "Uprav", edit_admin_album_path(album) %>
+		<%= link_to "Vymaž", admin_album_path(album), 
+				:method => :delete,
+				:data =>{ :confirm => "Chceš to naozaj zmazať?"} %>
+	</td>
+</tr>
