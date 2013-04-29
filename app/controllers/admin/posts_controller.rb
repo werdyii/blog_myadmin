@@ -1,8 +1,11 @@
 class Admin::PostsController < ApplicationController
   layout "admin"
+  helper_method :sort_column, :sort_direction
 
   def index
-    @posts = Post.all
+    # @posts = Post.all.page params[:page]
+    @posts = Post.page params[:page]
+    @posts = @posts.order(sort_column + ' ' + sort_direction)
   end
 
   def show
@@ -40,6 +43,17 @@ class Admin::PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to admin_posts_path
+  end
+
+  private
+  def sort_column
+    # params[:sort] || "name"
+    Post.column_names.include?(params[:sort]) ? params[:sort] : "title"
+  end
+
+  def sort_direction
+    # params[:direction] || "asc"
+    %w[asc desc].include?(params[:direction]) ?  params[:direction] : "asc"
   end
 
 end

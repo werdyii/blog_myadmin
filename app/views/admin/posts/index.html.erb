@@ -2,8 +2,8 @@
 <table>
 	<thead>
 		<tr>
-			<th>Názov článku</th>
-			<th>Posledna úprava</th>
+			<th><%= sortable "title", "Názov článku" %></th>
+			<th><%= sortable "updated_at", "Posledna úprava" %></th>
 			<th>Kategórie článkov</th>
 			<th>Akcia</th>
 		</tr>
@@ -12,7 +12,7 @@
 	<% @posts.each do |post| %>
 		<tr>
 			<td><%= post.title %></td>
-			<td><%= post.updated_at %></td>
+			<td><%= post.updated_at.strftime "%d.%m.%Y %H:%M:%S" %></td>
 			<td><%= post.category.name %></td>
 			<td>
 				<%= link_to "Uprav", edit_admin_post_path(post) %>
@@ -24,4 +24,5 @@
 	<% end %>		
 	</tbody>
 </table>
+<p><%= paginate @posts %></p>
 <p><%= link_to "Pridať článok", new_admin_post_path %></p>
