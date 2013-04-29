@@ -1,3 +1,39 @@
 // Place all the styles related to the photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.photos{
+	li{
+	  float: left;
+	  list-style: none;
+	  border: 1px solid #ccc;
+	  padding: 10px;
+	  margin-right: 10px;
+	  margin-bottom: 10px;
+	  box-shadow: 2px 2px 14px #CDB;
+	  position: relative;
+
+	  small{
+	  	display: block;
+	  	position: absolute;
+	  	top: 12px;
+	  	left: 97px;
+
+	  	a{
+	  		text-decoration: none;
+	  		color: #fff;
+	  		font-weight: bold;
+	  	}
+	  	a:hover{
+	  		color: red;
+	  	}
+	  }
+	}
+	li:hover{
+	  border: 1px solid #888;
+	  box-shadow: 0px 0px 0px #CDB;
+	}
+	.actions{
+		margin-top: 20px;
+	}
+}

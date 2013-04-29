@@ -1,5 +1,7 @@
 <li>
-	<%= image_tag photo.file.thumb100.url %>
+	<%= link_to image_tag(photo.file.thumb100.url), 
+							photo.file.url, 
+							{:rel => "album", :title => photo.album.name } %>
 	<small>
 		<%= link_to "X", 
 				album_photo_path( photo.album, photo),

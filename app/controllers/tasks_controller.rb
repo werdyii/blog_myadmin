@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-	befor_filter :load_project 
+	befors_filter :load_project 
 
 	def new
 		@task = Task.new

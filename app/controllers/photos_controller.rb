@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  befor_filter :load_album 
+  before_filter :load_album 
 
   def new
     @photo = Photo.new
