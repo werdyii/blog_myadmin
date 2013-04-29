@@ -14,10 +14,15 @@
 	  position: relative;
 
 	  small{
-	  	display: block;
-	  	position: absolute;
-	  	top: 12px;
-	  	left: 97px;
+	  	// display: block;
+	  	display: none;
+			position: absolute;
+			top: 13px;
+			left: 93px;
+			background-color: rgba(255, 255, 255, .6);
+			width: 15px;
+			text-align: center;
+			border-radius: 6px;
 
 	  	a{
 	  		text-decoration: none;
@@ -32,6 +37,11 @@
 	li:hover{
 	  border: 1px solid #888;
 	  box-shadow: 0px 0px 0px #CDB;
+
+	  small{
+	  	display: block;
+
+	  }
 	}
 	.actions{
 		margin-top: 20px;
